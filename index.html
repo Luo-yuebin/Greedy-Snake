@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>贪食蛇</title>
+	<link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cssReset.css">
+</head>
+<body>
+  <!--画出地图，设置样式-->
+  <div class="main">
+    <div class="fl">
+      <div class="map">
+        <div class="container">
+          <h2 id="score">0</h2>
+        </div>
+      </div>	
+      <div class="start">
+          <button onclick="gm.init()">
+            <a>START</a>
+          </button>
+      </div>
+    </div>
+    <div class="bottom fl">
+    <div class="btn fr">
+      <button onmousedown="gm.changeDirection(0)" onmousemove="gm.changeBtnColorMove(0)" onmouseout="gm.changeBtnColorOut(0)" class="btnLeft">
+        <a></a>
+      </button>
+      <button onmousedown="gm.changeDirection(1)" onmousemove="gm.changeBtnColorMove(1)" onmouseout="gm.changeBtnColorOut(1)" class="btnUp">
+        <a></a>
+      </button>
+      <button onmousedown="gm.changeDirection(2)" onmousemove="gm.changeBtnColorMove(2)" onmouseout="gm.changeBtnColorOut(2)" class="btnRight">
+        <a></a>
+      </button>
+      <button onmousedown="gm.changeDirection(3)" onmousemove="gm.changeBtnColorMove(3)" onmouseout="gm.changeBtnColorOut(3)" class="btnDown">
+        <a></a>
+      </button>
+    </div>
+    <div class="advice">
+      <p class="p1">PC端建议使用方向键操纵小蛇</p>
+      <p class="p2">移动端可以通过右侧按钮操纵小蛇</p>
+    </div>
+    <div class="info">
+      <p class="p3">By&nbsp&nbsp罗粤滨&nbsp&nbspluo_yuebin@qq.com</p>
+      <p class="p4"><a href="https://github.com/Luo-yuebin"><img src="images/github.png">&nbsp&nbsphttps://github.com/Luo-yuebin</a></p>
+    </div>
+    </div>
+  </div>
+  <script src="Food.js"></script>
+  <script src="Game.js"></script>
+  <script src="Snake.js"></script>
+  <script type="text/javascript">
+  //初始化游戏对象
+  var gm = new Game(document.querySelector(".map"));
+  </script>
+
+</body>
+</html>
